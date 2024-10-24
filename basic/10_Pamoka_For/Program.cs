@@ -1,56 +1,60 @@
-﻿for (int i = 0; i <= 10; i++)
-{
-    Console.WriteLine(i);
-}
+﻿//for (int i = 0; i <= 10; i++)
+//{
+//    Console.WriteLine(i);
+//}
 
-for (int i = 3; i <= 10; i++)
-{
-    Console.WriteLine(i);
-}
+//for (int i = 3; i <= 10; i++)
+//{
+//    Console.WriteLine(i);
+//}
 
-for (int i = 0; i <= 10; i += 3)
-{
-    Console.WriteLine(i);
-}
+//for (int i = 0; i <= 10; i += 3)
+//{
+//    Console.WriteLine(i);
+//}
 
-string result = "mano vardas";
-char r = result[0];
-for (int i = 0; i < result.Length; i++) 
-{
-    if (i == 5) 
-    {
-        break;
-    }
+using System.Text;
 
-    if (i == 0)
-    {
-        char firstLetter = result[0];
-        Console.WriteLine(firstLetter.ToString().ToUpper());
-        continue;
-    }
+//string result = "mano vardas";
+//char r = result[0];
+//for (int i = 0; i < result.Length; i++) 
+//{
+//    if (i == 5) 
+//    {
+//        break;
+//    }
 
-    Console.WriteLine(result[i]);
-}
+//    if (i == 0)
+//    {
+//        char firstLetter = result[0];
+//        Console.WriteLine(firstLetter.ToString().ToUpper());
+//        continue;
+//    }
 
-int num1 = Methods.GetNumberInput(true);
-int num2 = Methods.GetNumberInput(false);
+//    Console.WriteLine(result[i]);
+//}
 
-int num3 = Methods.GetNumberInput("firstNumber");
-int num4 = Methods.GetNumberInput("secondNumber");
+//int num1 = Methods.GetNumberInput(true);
+//int num2 = Methods.GetNumberInput(false);
 
-List<int> listas = new List<int>();
-for (int i = 1; i < 10; i++)
-{
-    int num = Methods.GetNumberInput($"{i} number");
-    listas.Add(num);
-}
+//int num3 = Methods.GetNumberInput("firstNumber");
+//int num4 = Methods.GetNumberInput("secondNumber");
 
-for (int i = 0; i < listas.Count; i++)
-{
-    int item = listas[i];
-}
+//List<int> listas = new List<int>();
+//for (int i = 1; i < 10; i++)
+//{
+//    int num = Methods.GetNumberInput($"{i} number");
+//    listas.Add(num);
+//}
 
-int num5 = Methods.GetNumberInput("thirdNumber");
+//for (int i = 0; i < listas.Count; i++)
+//{
+//    int item = listas[i];
+//}
+
+//int num5 = Methods.GetNumberInput("thirdNumber");
+
+var t = Methods.RemoveDuplicateCharacters("labas");
 
 
 public static class Methods 
@@ -68,5 +72,31 @@ public static class Methods
         Console.WriteLine($"Enter {consoleText}");
         string input = Console.ReadLine();
         return int.Parse(input);
+    }
+
+    public static string RemoveDuplicateCharacters(string input)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        foreach (char c in input)
+        {
+            bool isDuplicate = false;
+
+            for (int i = 0; i < sb.Length; i++)
+            {
+                if (sb[i] == c)
+                {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+
+            if (!isDuplicate)
+            {
+                sb.Append(c);
+            }
+        }
+
+        return sb.ToString();
     }
 }
