@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_11_pamoka_debug_ir_stringbuilder", "_11_pamoka_debug_ir_stringbuilder\_11_pamoka_debug_ir_stringbuilder.csproj", "{C0E39C4E-5BC4-4F45-AA87-7FB2D2745CA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0E39C4E-5BC4-4F45-AA87-7FB2D2745CA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E39C4E-5BC4-4F45-AA87-7FB2D2745CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E39C4E-5BC4-4F45-AA87-7FB2D2745CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E39C4E-5BC4-4F45-AA87-7FB2D2745CA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E859CFA-459A-482F-982F-EF1F98669FAE}
+	EndGlobalSection
+EndGlobal
