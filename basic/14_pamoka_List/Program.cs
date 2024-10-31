@@ -34,12 +34,23 @@ foreach (var number in numberWithValues)
     Console.WriteLine(number);
 }
 
-
-
 List<object> myObjectList = new List<object>();
 myObjectList.Add(1);
 myObjectList.Add("myString");
 myObjectList.Add('n');
+
+var myInnerList = new List<List<List<string>>>();
+
+foreach (List<List<string>> item in myInnerList)
+{
+    foreach (List<string> i in item)
+    {
+        foreach (string item1 in i)
+        {
+            
+        }
+    }
+}
 
 var t2 = myObjectList[0];
 Console.WriteLine();
