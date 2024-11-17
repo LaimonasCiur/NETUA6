@@ -20,7 +20,6 @@ foreach (var cityKeyValuePair in citiesWithValues)
     Console.WriteLine(cityKeyValuePair.Value);
 }
 
-
 var isValue = playerPoints.TryGetValue("Tomas", out var points);
 if (!isValue) 
 {
@@ -29,4 +28,35 @@ if (!isValue)
 }
 
 var t = playerPoints.Values;
-var t1 = playerPoints.Values;
+var t1 = playerPoints.Keys;
+
+var t2 = Methods._myProperty;
+
+var myList = new List<int>();
+Methods.Test(myList);
+Console.WriteLine();
+
+public static class Methods 
+{
+    public static List<int> _myProperty { get; set; }
+
+    public static void Test(List<int> myList) 
+    {
+
+        _myProperty.Add(9);
+        myList.Add(1);
+    }
+
+    public static void Test2()
+    {
+        _myProperty.Add(9);
+
+    }
+
+
+    public static void Test3()
+    {
+        _myProperty.Add(9);
+
+    }
+}
