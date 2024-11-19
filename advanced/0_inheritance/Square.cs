@@ -21,7 +21,8 @@
 
         public override double GetPerimater()
         {
-            return NumberOfAngles * 4;
+            var t = base.GetPerimater();
+            return NumberOfAngles * 4 + t;
         }
     }
 }
